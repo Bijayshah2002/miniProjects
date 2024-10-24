@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    transition: all .3s linear;
+}
+body,html{
+    min-height: 100vh;
+    background-color: #717168;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+.img-container{
+    width:700px;
+    height:400px;
+    border:2px solid brown;
+    background: url(PIcOIN.jpg) center/cover fixed no-repeat;
+    box-shadow: 10px 10px 100px black;
+    border-radius: 10px;
+}
+.btn-backward{
+position:relative;
+ top:47%;
+ left:-1.5%;
+ font-size: 30px;
+ transform: translate(-50%,-50%);
+ background-color: blueviolet;
+ color: aqua;
+ border:1px solid green;
+}
+.btn-forward{
+position:relative;
+ top:47%;
+ left:666px;
+ font-size: 30px;
+ transform: translate(-50%,-50%);
+ background-color: blueviolet;
+ color: aqua;
+ border:1px solid green;
+}

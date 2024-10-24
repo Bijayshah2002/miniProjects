@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last message delivered</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the project</h1>
+        <h2>Enter your message below</h2>
+        <form action="" id="message-form">
+            <input type="text"  class="messageBox">
+<input type="submit" value="submit" id="submit">      </form>
+        <p id="blank"></p>
+        <h3>you last msg delivered:</h3>
+        <P id="lastMsg"></P>
+    </div>
+    <script>
+        (function(){
+         const form=document.querySelector("#message-form");
+         form.addEventListener('submit',function(e){
+            e.preventDefault();
+            const message=document.querySelector(".messageBox").value;
+            if(message==""){
+                document.getElementById("lastMsg").innerHTML="";
+
+                document.getElementById("blank").innerHTML="please enter the message";
+                document.getElementById("blank").style.backgroundColor="red";
+
+            }
+            else{
+                document.getElementById("blank").innerText="";
+                document.getElementById("blank").style.backgroundColor="aliceblue";
+
+            document.getElementById("lastMsg").innerHTML=message;
+         
+        }})
+
+
+        })();
+        // let submit=document.getElementById("submit");
+        // submit.addEventListener('submit',function(){
+        //  let message=document.getElementById("message").value;
+        //  if(message==""){
+        //     document.getElementById("blank").innerHTML="No blank msg can pass";
+        //  }
+        //  else
+        // document.getElementById("lastMsg").textContent=message;
+        // });
+    </script>
+</body>
+</html>

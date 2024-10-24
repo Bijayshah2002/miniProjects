@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#2e2e57,#7e5c5c,rgb(39, 62, 39));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.heading{
+    display: flex;
+}
+.heading img{
+    height: 3rem;
+    margin-left: .5rem;
+    border-radius: 5px;
+}
+.heading h1{
+    padding: 7px;
+}
+.todoList{
+    width: 28rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+.todoList #textbox{
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid brown;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.todoList button{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: .5rem;
+    margin-left: -3rem;
+    height: 2rem;
+    width: 3rem;
+    background: rgb(187, 206, 206);
+    border-radius: 1rem;
+    border:none
+    
+}
+.todoList button:hover{
+    transition: .5s;
+    background-color: #cfbea8;
+    border: 1px solid black;
+}
+
+
+    
+.list li{
+    position: relative;
+    list-style: none;
+    background-color: #bba3a3;
+    padding: 0.7rem;
+    
+    border:none;
+    border-bottom: 3px dashed #000000;
+    border-radius: 1rem;
+    margin: 0.7rem 0 ;
+
+}
+.list li:hover{
+    cursor: pointer;
+}
+.list li::before{
+position: relative;
+left: -4px;
+ display: inline-flex;
+ content: '';
+top: 2px;
+ height: 1rem;
+ width: 1rem;
+ border-radius: 50%;
+ background-color: antiquewhite;
+}
+
+.list #taskList .checked{
+    text-decoration: line-through;
+    color: #555555;
+}
+.list ul .checked::before{
+    background-image: url(Images/check.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li span{
+    position:absolute;
+    right: 0.6rem;
+    top: 4px;
+    height: 1rem;
+    width: 1rem;
+    font-size: 2rem;
+    color: #555555;
+    
+}
+ul li span:hover{
+
+    color: #a00000;
+}

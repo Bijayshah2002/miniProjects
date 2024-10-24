@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="img-container">
+        <a href="" class="btn btn-backward"><i class="fa fa-step-backward" aria-hidden="true"></i></a>
+        <a href=""  class="btn btn-forward"><i class="fa fa-step-forward" aria-hidden="true"></i></a>
+    </div> 
+    <script>
+    let imgList=['PIcOIN.jpg','slideshow-8.jpg','slideshow-9.jpg','slideshow-11.jpg','tech.webp']
+    console.log(imgList.length)
+    const buttons=document.querySelectorAll(".btn");
+    const image=document.querySelector(".img-container");
+    let counter=0;
+    buttons.forEach(function (button){
+        button.addEventListener('click',function(e){
+            e.preventDefault();
+          if(button.classList.contains('btn-forward')){
+            counter++;
+            if(counter==imgList.length){
+            counter=0
+            }
+            
+           image.style.background='url('+imgList[counter]+') center/cover fixed no-repeat';
+           
+          }
+          if(button.classList.contains('btn-backward')){
+            counter--
+
+            if(counter<0){
+                counter=imgList.length-1
+            }
+            image.style.background='url('+imgList[counter]+') center/cover fixed no-repeat';
+           
+          }
+        });
+    } );
+
+
+    </script>
+</body>
+</html>
